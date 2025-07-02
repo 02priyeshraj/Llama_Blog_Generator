@@ -8,19 +8,17 @@ def getLLamaresponse(input_text, no_words, blog_style):
         model='models/llama-2-7b-chat.ggmlv3.q8_0.bin',
         model_type='llama',
         config={
-            'max_new_tokens': 1024,
+            'max_new_tokens': 256,
             'temperature': 0.01
         }
     )
 
-    # Prompt Template
     template = """
-    You are an expert blog writer.
+    You are a professional blog writer.
 
-    Write a short and informative blog of around {no_words} words for a {blog_style} audience.
-    Topic: "{input_text}"
+    Write a clear, engaging, and informative blog in around {no_words} words for a {blog_style} audience on the topic: "{input_text}".
 
-    Use simple language, a clear structure (intro, body, conclusion), and avoid technical jargon if not necessary.
+    Avoid labeling sections like intro/body/conclusion. Make it a natural, flowing article with a smooth structure and human tone. Keep the language simple and avoid technical jargon unless necessary.
     """
 
     prompt = PromptTemplate(
@@ -28,13 +26,12 @@ def getLLamaresponse(input_text, no_words, blog_style):
         template=template
     )
 
-    # Generate response
-    response = llm(prompt.format(
+    return llm.invoke(prompt.format(
         blog_style=blog_style,
         input_text=input_text,
         no_words=no_words
     ))
-    return response
+
 
 
 # Streamlit Page Configuration
@@ -64,7 +61,7 @@ with st.container():
 
     col1, col2 = st.columns(2)
     with col1:
-        no_words = st.number_input('🔢 Approximate word count', min_value=50, max_value=500, step=50, value=150)
+        no_words = st.number_input('🔢 Approximate word count', min_value=50, max_value=250, step=50, value=150)
     with col2:
         blog_style = st.selectbox(
             '🎯 Target Audience',
