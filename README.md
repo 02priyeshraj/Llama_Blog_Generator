@@ -39,7 +39,7 @@ streamlit run app.py
 
 ---
 
-## 🖼 Project Structure
+## Project Structure
 
 ```
 Llama_Blog_Generator/
