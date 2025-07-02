@@ -1,0 +1,19 @@
+# Byte-compiled / virtual env
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+myenv/
+
+# Model weights
+models/*.bin
+
+# VSCode/PyCharm
+.idea/
+.vscode/
+
+# Streamlit
+.streamlit/
