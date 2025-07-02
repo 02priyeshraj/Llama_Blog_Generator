@@ -1,22 +1,22 @@
-# ✍️ AI Blog Generator
+# AI Blog Generator
 
 A simple and intelligent Streamlit-based application powered by LLaMA 2 that generates short, structured, and audience-specific blogs using natural language prompts.
 
 ---
 
-## 🧠 Features
+## Features
 
-* 🚀 Generates short blogs instantly
-* ✍️ Audience-specific writing (Researchers, Data Scientists, Common People)
-* 🎯 Custom word count control
-* 📄 Clean, structured output (Intro, Body, Conclusion)
-* 🖼️ Beautiful UI with image header
-* ⚡ Powered by LangChain + LLaMA 2 model (running locally)
+* Generates short blogs instantly
+* Audience-specific writing (Researchers, Data Scientists, Common People)
+* Custom word count control
+* Clean, structured output (Intro, Body, Conclusion)
+* 🖼Beautiful UI with image header
+* Powered by LangChain + LLaMA 2 model (running locally)
 
 
 ---
 
-## 📦 Installation & Setup
+## Installation & Setup
 
 ```bash
 # 1. Clone the repository
