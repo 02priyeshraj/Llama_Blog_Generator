@@ -10,7 +10,7 @@ A simple and intelligent Streamlit-based application powered by LLaMA 2 that gen
 * Audience-specific writing (Researchers, Data Scientists, Common People)
 * Custom word count control
 * Clean, structured output (Intro, Body, Conclusion)
-* 🖼Beautiful UI with image header
+* Beautiful UI with image header
 * Powered by LangChain + LLaMA 2 model (running locally)
 
 
